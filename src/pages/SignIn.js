@@ -1,7 +1,7 @@
 import React from 'react'
 import './SignIn.css';
-import logo from '../images/logo.png'
-// import { Link } from 'react-router-dom';
+import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
 
 function SignIn() {
     return (
@@ -31,7 +31,7 @@ function SignIn() {
                     </div>
                 </div>
                 <button className='btn--'>LOGIN</button>
-                <h6 className='login-txt'>don't have an account? <a to='/' > Sign Up </a></h6>
+                <h6 className='login-txt'>don't have an account? <Link to='/' > Sign Up </Link></h6>
             </div>
         </div>
         </div>
