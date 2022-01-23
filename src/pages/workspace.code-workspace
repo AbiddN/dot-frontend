@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\Tahta\\Belajar\\FRONTEND"
+		},
+		{
+			"path": "..\\..\\..\\..\\Tahta\\Penugasan OTI 2021"
+		},
+		{
+			"path": "..\\..\\..\\..\\abyan-repo"
+		},
+		{
+			"path": "c:\\Users\\Asus\\Desktop\\rep"
+		},
+		{
+			"path": "c:\\Users\\Asus\\Downloads\\reporepo"
+		},
+		{
+			"path": "..\\..\\..\\..\\tugas3"
+		},
+		{
+			"path": "..\\..\\..\\..\\reactrouter"
+		},
+		{
+			"path": "..\\..\\..\\..\\Tahta\\Belajar\\ReactJS\\website1"
+		},
+		{
+			"path": "..\\..\\dot-frontend"
+		},
+		{
+			"path": "..\\.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FRONTEND",
+		"git.ignoreLimitWarning": true
+	}
+}

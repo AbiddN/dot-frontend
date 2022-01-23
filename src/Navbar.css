@@ -1,0 +1,106 @@
+
+.navbar{
+    background-color: #90A1C1;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:10px;
+    color: #F1F4F7;
+    position: sticky;
+}
+.logo{
+    /* background-color: blueviolet; */
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+}
+.logo-img img{
+    height: 40px;
+    background-color: #F1F4F7;
+    padding: 5px 8px;
+    border-radius: 20%;
+}
+.ava-img{
+    height: 35px;
+    width: 35px;
+    background-color: #F1F4F7;
+    padding: 5px 8px;
+    border-radius: 50%;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.ava-img img{
+    height: 100%;
+}
+.nav-text{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.account{
+    /* background-color: green; */
+    display: flex;
+    margin-right: 60px;
+        align-items: center;
+        /* background-color: green; */
+        position: relative;
+}
+.account .icon{
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 20px;
+    color: #F1F4F7;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.account .active{
+    transform:rotate(-90deg);
+        cursor: pointer;
+        transition: 0.2s ease;
+        font-size: 20px;
+        color: #F1F4F7;
+}
+.account .logout{
+    width: 92%;
+    height: 40px;
+    background-color: white;
+    position: absolute; 
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: 50px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.account .logoutactive{
+    width: 92%;
+    height: 40px;
+    background-color: white;
+    position: absolute; 
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: 50px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+    transform: scaleY(1);
+}
+.account .logout:hover{
+    background-color: #dddddd;
+}
+.account .logout h3{
+    color: #444444;
+    font-weight: 400;
+}
+

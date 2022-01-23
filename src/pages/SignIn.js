@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 function SignIn() {
     return (
         <div className="sign-in-full-container">
-            <div className="logo">
+            {/* <div className="logo">
                 <img src={logo} alt="" />
-            </div>
+            </div> */}
             <h2 className='sign-in-text'>SIGN IN</h2>
         <div className="sign-in-container">
             <div className="sign-in-content">
