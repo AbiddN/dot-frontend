@@ -1,8 +1,8 @@
 import React from 'react';
-import './Navbar.css';
-import logo from './images/logo.png';
+import './Header.css';
+import logo from '../images/logo.png';
 
-function Navbar() {
+function Header() {
     const [logout,setLogout]=React.useState(false);
 
     const handleLogout = ((event) => {
@@ -11,8 +11,8 @@ function Navbar() {
     })
     
     return (
-        <nav className="navbar">
-            <div className="logo">
+        <nav className="header">
+            <div className="logo-header">
                 <div className="logo-img">
                     <img src={logo} alt="" />
                 </div>
@@ -34,4 +34,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Header
