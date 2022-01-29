@@ -1,0 +1,90 @@
+.postingcard-container{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    border-right: 2px solid rgba(0, 0, 0, 0.247);
+}
+.postingcard-wrapper{
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.24);
+    /* margin-top: 50px; */
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    padding-top: 17px;
+    display: flex;
+}
+.post-ava{
+    width: 90px;
+    height: 120px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+}
+.post-ava-img{
+    background-color: rgb(205, 207, 207);
+    overflow: hidden;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+.post-area{
+    /* background-color: yellow; */
+    width: 100%;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textarea{
+    width: 100% ;
+    min-height: 76px;
+    resize: none;
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.post{
+    /* background-color: turquoise; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 7px;
+    align-items: center;
+    justify-content:space-around;
+}
+.post .addimage{
+    /* background-color: red; */
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    transition: .3s ease;
+    cursor: pointer;
+    border-radius: 500px;
+}
+.post .addimage:hover{
+    background-color: rgb(233, 232, 232);
+}
+.post button{
+    outline: none;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 70px;
+    background-color: #90A1C1;
+    cursor: pointer;
+    width: 150px;
+    height: 100%;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
