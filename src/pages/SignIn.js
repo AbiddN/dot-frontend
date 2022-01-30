@@ -7,6 +7,26 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 
 function SignIn() {
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    let { unOrEmail, password } = data;
+    let reqBody = createRequest("POST", { unOrEmail, password });
+    try {
+      fetch("http://localhost:5000/api/users/signin", reqBody)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
+    } catch (error) {
+      setError("unOrEmail", "manual", error.message);
+    }
+  };
   return (
     <div className="sign-in-full-container">
       {/* <div className="logo">
@@ -14,7 +34,7 @@ function SignIn() {
             </div> */}
       <h2 className="sign-in-text">SIGN IN</h2>
       <div className="sign-in-container">
-        <div className="sign-in-content">
+        <form className="sign-in-content">
           <div className="input-wrapper">
             <h3 className="input-text">Email :</h3>
             <div className="input-icon">
@@ -45,7 +65,13 @@ function SignIn() {
           <h6 className="login-txt">
             don't have an account? <Link to="/"> Sign Up </Link>
           </h6>
-        </div>
+          <button className="btn--" type="submit">
+            LOGIN
+          </button>
+          <h6 className="login-txt">
+            don't have an account? <Link to="/"> Sign Up </Link>
+          </h6>
+        </form>
       </div>
       <ErrorMessage
         errors={errors}
@@ -54,12 +80,6 @@ function SignIn() {
           <small className="color-error">{message}</small>
         )}
       />
-      <button className="btn--" type="submit">
-        LOGIN
-      </button>
-      <h6 className="login-txt">
-        don't have an account? <Link to="/"> Sign Up </Link>
-      </h6>
     </div>
   );
 }

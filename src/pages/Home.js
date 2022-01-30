@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./Home.scss";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Postingcard from "../components/Postingcard";
