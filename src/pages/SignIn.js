@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 
-function SignIn() {
+const SignIn = () => {
   const {
     register,
     handleSubmit,
@@ -82,6 +82,6 @@ function SignIn() {
       />
     </div>
   );
-}
+};
 
 export default SignIn;
