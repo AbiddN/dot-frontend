@@ -173,7 +173,7 @@ function SignUp() {
             SIGN UP
           </button>
           <h6 className="login-txt">
-            Already have an account? <Link to="/Signin"> Sign In </Link>
+            Already have an account? <Link to="/signin"> Sign In </Link>
           </h6>
         </form>
       </div>

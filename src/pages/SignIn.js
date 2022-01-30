@@ -34,7 +34,7 @@ const SignIn = () => {
             </div> */}
       <h2 className="sign-in-text">SIGN IN</h2>
       <div className="sign-in-container">
-        <form className="sign-in-content">
+        <form className="sign-in-content py-2 px-2">
           <div className="input-wrapper">
             <h3 className="input-text">Email :</h3>
             <div className="input-icon">
@@ -63,13 +63,7 @@ const SignIn = () => {
           </div>
           <button className="btn--">LOGIN</button>
           <h6 className="login-txt">
-            don't have an account? <Link to="/"> Sign Up </Link>
-          </h6>
-          <button className="btn--" type="submit">
-            LOGIN
-          </button>
-          <h6 className="login-txt">
-            don't have an account? <Link to="/"> Sign Up </Link>
+            don't have an account? <Link to="/signup"> Sign Up </Link>
           </h6>
         </form>
       </div>
