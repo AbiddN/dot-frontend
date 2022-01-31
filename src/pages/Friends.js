@@ -3,23 +3,18 @@ import "./Friends.scss";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Postingcard from "../components/Postingcard";
+import Postedcard from "../components/Postedcard";
 
-class Friends extends React.Component {
-  render() {
-    return (
-      <div className="home-container">
-        <Header />
-        <div className="home">
-          <div className="home-navbar">
-            <Navbar />
-          </div>
-          <div className="friends-main">
-            <h1>Friends</h1>
-          </div>
-        </div>
+const Friends = () => {
+  return (
+    <div className="home-container">
+      <h1>HELLOOOOO</h1>
+      <div className="home-post">
+        <Postingcard />
+        <Postedcard />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Friends;

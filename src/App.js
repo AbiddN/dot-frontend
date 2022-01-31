@@ -19,17 +19,12 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/home" element={<Home />}></Route>
         </Route>
+        <Route element={<Layout />}>
+          <Route path="/friends" element={<Friends />}></Route>
+        </Route>
         <Route exact path="/" element={<Landing />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
-        {/* <Route
-          path="/home"
-          element={<ProtectedRoute component={Home} />}
-        ></Route> */}
-        <Route
-          path="/friends"
-          element={<ProtectedRoute component={Friends} />}
-        ></Route>
       </Routes>
     </div>
   );
