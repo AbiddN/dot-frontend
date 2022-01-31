@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import whitelogo from "../images/whitelogo.png";
 import { Link, useLocation } from "react-router-dom";
+import { createRequest } from "../services/http";
+import config from "../config";
 
-function Navbar() {
+const Navbar = () => {
+  console.log(config.apiURL);
+  const getCurrentUser = async () => {
+    let user = await fetch(
+      `${config.apiURL}api/users/current_user`,
+      createRequest("GET")
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getCurrentUser();
+  });
+
   if (["home", "friends"].includes(useLocation().pathname.slice(1))) {
     return (
       <div className="tot">
@@ -47,6 +66,6 @@ function Navbar() {
   } else {
     return null;
   }
-}
+};
 
 export default Navbar;

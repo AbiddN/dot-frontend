@@ -12,7 +12,7 @@ import Home from "./pages/Home";
 import Friends from "./pages/Friends";
 import Postingcard from "./components/Postingcard";
 
-function App() {
+const App = () => {
   return (
     <div className="">
       <Routes>
@@ -28,6 +28,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
