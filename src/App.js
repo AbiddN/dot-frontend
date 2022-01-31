@@ -8,26 +8,20 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import Friends from "./pages/Friends";
 import Postingcard from "./components/Postingcard";
 
 function App() {
   return (
-    // <>
-    //   <Router>
-    //     <Routes>
-    //       <Route path="/SignIn" element={<SignIn />}></Route>
-    //       <Route path="/SignUp" element={<SignUp />}></Route>
-    //     </Routes>
-    //   </Router>
-    //   <ProtectedRoute path="/Home" element={<Home />}></ProtectedRoute>
-    // </>
     <Routes>
+
       <Route exact path="/" element={<Landing />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/signin" element={<SignIn />}></Route>
+      <Route path="/home" element={<ProtectedRoute component={Home} />}></Route>
       <Route
-        path="/home"
-        element={<ProtectedRoute component={Home} />}
+        path="/friends"
+        element={<ProtectedRoute component={Friends} />}
       ></Route>
     </Routes>
   );

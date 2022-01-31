@@ -24,7 +24,7 @@ function Header() {
                     <img src='' alt="" />
                 </div>
                 <div className= {`icon ${logout?"active":""}`} onClick={handleLogout}>
-                    <i class="fas fa-caret-left" ></i>
+                    <i className="fas fa-caret-left" ></i>
                 </div>
                 <div className= {`logout ${logout?"logoutactive":""}`} onClick={handleLogout}>
                     <h3>Logout</h3>
