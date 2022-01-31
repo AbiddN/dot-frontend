@@ -25,6 +25,7 @@ function App() {
       <Route exact path="/" element={<Landing />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/signin" element={<SignIn />}></Route>
+      {/* <Route path="/home" element={<Home />}></Route> */}
       <Route
         path="/home"
         element={<ProtectedRoute component={Home} />}

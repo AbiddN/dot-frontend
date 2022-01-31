@@ -19,7 +19,6 @@ function Postingcard() {
             <button>Post</button>
           </div>
         </div>
-
       </div>
      </div>
   );
