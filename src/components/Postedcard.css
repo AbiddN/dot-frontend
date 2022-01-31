@@ -1,0 +1,101 @@
+.postedcard-container {
+    /* background-color: pink; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.postedcard-wrapper {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.24);
+    margin-top: 10px;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    padding-top: 17px;
+    display: flex;
+}
+
+.post-ava {
+    width: 90px;
+    height: 120px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+}
+
+.post-ava-img {
+    background-color: rgb(205, 207, 207);
+    overflow: hidden;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+.posted-area {
+    /* background-color: yellow; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posted-textarea {
+    width: 100%;
+    min-height: 56px;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    /* background-color: green; */
+    font-weight: 400;
+}
+.posted-username{
+    /* background-color: green; */
+    width: 100%;
+    padding-left: 10px;
+    font-size: ;
+}
+
+.feedback-area {
+    /* background-color: turquoise; */
+    width: 100%;
+    height: 30px;
+    display: flex;
+    margin-top: 7px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.feedback-area .icon{
+    color: rgb(231, 231, 231);
+    margin: 0 20px;
+    /* background-color: aqua; */
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: all .3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.feedback-area .icon:hover{
+    background-color: rgb(231, 231, 231);
+    color: white;
+}
+.comment i{
+    /* border: 2px solid green; */
+    
+}
+.liked{
+    color: rgb(245, 80, 80);
+    /* background-color: red; */
+    transition: .4s ease;
+}
+
