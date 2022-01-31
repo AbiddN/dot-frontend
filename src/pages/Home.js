@@ -3,6 +3,7 @@ import "./Home.scss";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Postingcard from "../components/Postingcard";
+import Postedcard from "../components/Postedcard";
 
 function Home() {
   return (
@@ -14,6 +15,10 @@ function Home() {
         </div>
         <div className="home-post">
           <Postingcard />
+          <Postedcard />
+        </div>
+        <div className="home-friend">
+          
         </div>
       </div>
     </div>
