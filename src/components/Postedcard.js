@@ -20,10 +20,10 @@ function Postedcard() {
           <h2 className="posted-textarea">HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOOHALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO HALOO</h2>
           <div className="feedback-area">
             <div className='icon like' onClick={handleLike}>
-              <i class={`fas fa-heart ${like?"liked":""}`}></i>  
+              <i className={`fas fa-heart ${like?"liked":""}`}></i>  
             </div>
             <div className="icon comment">
-              <i class='fas fa-comments'></i>
+              <i className='fas fa-comments'></i>
             </div>
           </div>
         </div>

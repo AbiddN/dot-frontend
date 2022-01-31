@@ -8,16 +8,10 @@ import Postedcard from "../components/Postedcard";
 function Home() {
   return (
     <div className="home-container">
-      <Header />
-      <div className="home">
-        <div className="home-navbar">
-          <Navbar />
-        </div>
-        <div className="home-post">
-          <Postingcard />
-          <Postedcard />
-        </div>
-        <div className="home-friend"></div>
+      <h1>HELLOOOOO</h1>
+      <div className="home-post">
+        <Postingcard />
+        <Postedcard />
       </div>
     </div>
   );
