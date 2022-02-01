@@ -1,9 +1,13 @@
-export const createRequest = (method, body) => {
-  return {
+export const createRequest = (method, body = null) => {
+  let req = {
     method: method,
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(body),
   };
+
+  if (method === "POST" || method === "PUT") {
+    req.body = JSON.stringify(body);
+  }
+  return req;
 };

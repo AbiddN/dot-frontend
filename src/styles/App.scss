@@ -19,3 +19,22 @@ body {
   height: 100vh;
   width: 100%;
 }
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "navbar main friends";
+  background-color: #e7ecf1;
+}
+
+.main-navbar {
+  grid-area: navbar;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+.main-friend {
+  grid-area: friend;
+}

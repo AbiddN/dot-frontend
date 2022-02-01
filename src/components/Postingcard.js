@@ -14,7 +14,7 @@ function Postingcard() {
           <textarea className="textarea" />
           <div className="post">
             <div className="addimage">
-              <i class="far fa-images"></i>
+              <i className="far fa-images"></i>
             </div>
             <button>Post</button>
           </div>

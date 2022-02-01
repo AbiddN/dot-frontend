@@ -5,6 +5,7 @@ import logo from "../images/logo.png";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
+import config from "../config";
 
 const SignIn = () => {
   const {
@@ -20,7 +21,7 @@ const SignIn = () => {
     let { unOrEmail, password } = data;
     let reqBody = createRequest("POST", { unOrEmail, password });
     try {
-      fetch("http://localhost:5000/api/users/signin", reqBody)
+      fetch(`${config.apiURL}api/users/signin`, reqBody)
         .then(async (response) => {
           if (response.ok) {
             return response.json();

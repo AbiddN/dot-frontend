@@ -5,6 +5,7 @@ import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
+import config from "../config";
 
 function SignUp() {
   const {
@@ -28,7 +29,7 @@ function SignUp() {
     let requestOptions = createRequest("POST", reqBody);
 
     try {
-      fetch("http://localhost:5000/api/users/signup", requestOptions)
+      fetch(`${config.apiURL}api/users/signup`, requestOptions)
         .then((response) => response.json())
         .then((data) => {
           console.log(data);

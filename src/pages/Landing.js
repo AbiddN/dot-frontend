@@ -2,7 +2,8 @@ import React from "react";
 import Whitelogo from '../images/whitelogo.png'
 import './Landing.scss';
 
-const Landing = () => {
+const Landing = (props) => {
+    console.log(props);
     return (
         <div className="lp_section">
         <div className="lp_container">
@@ -25,5 +26,6 @@ const Landing = () => {
     </div>
     );
 }
+
 
 export default Landing;
