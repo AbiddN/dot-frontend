@@ -17,10 +17,16 @@ const App = () => {
     <div className="">
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/home" element={<Home />}></Route>
+          <Route
+            path="/home"
+            element={<ProtectedRoute component={Home} />}
+          ></Route>
         </Route>
         <Route element={<Layout />}>
-          <Route path="/friends" element={<Friends />}></Route>
+          <Route
+            path="/friends"
+            element={<ProtectedRoute component={Friends} />}
+          ></Route>
         </Route>
         <Route exact path="/" element={<Landing />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>

@@ -1,18 +1,40 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation, Navigate } from "react-router-dom";
 import "./Header.css";
 import logo from "../images/logo.png";
+import { createRequest } from "../services/http";
+import config from "../config";
 
 function Header() {
   const [logout, setLogout] = React.useState(false);
+  const [loggedUser, setLoggedUser] = React.useState(null);
 
   const handleLogout = (event) => {
     event.preventDefault();
-    setLogout(!logout);
+    delete localStorage.token;
+    setLogout(true);
   };
+
+  const getCurrentUser = async () => {
+    let user = await fetch(
+      `${config.apiURL}api/users/current_user`,
+      createRequest("GET", {}, true)
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setLoggedUser(data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getCurrentUser();
+  }, []);
+
   if (["home", "friends"].includes(useLocation().pathname.slice(1))) {
     return (
       <nav className="header">
+        {logout && <Navigate to="/" />}
         <div className="logo-header">
           <div className="logo-img">
             <img src={logo} alt="" />
@@ -22,7 +44,10 @@ function Header() {
         <div className="account">
           <h4 className="nav-text">Hi...Marina</h4>
           <div className="ava-img">
-            <img src="" alt="" />
+            <img
+              src={loggedUser ? loggedUser.decodedProfileImage : null}
+              alt=""
+            />
           </div>
           <div
             className={`icon ${logout ? "active" : ""}`}
