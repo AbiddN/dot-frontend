@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "./SignIn.scss";
-import { createRequest } from "../services/http";
-import logo from "../images/logo.png";
+import { signin } from "../actions/auth";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
@@ -16,33 +16,25 @@ const SignIn = () => {
   } = useForm();
 
   const [signedIn, setSignedIn] = useState(false);
+  const user = useSelector((state) => state.user);
+
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
     let { unOrEmail, password } = data;
-    let reqBody = createRequest("POST", { unOrEmail, password });
-    try {
-      fetch(`${config.apiURL}api/users/signin`, reqBody)
-        .then(async (response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw new Error((await response.json()).message);
-          }
-        })
-        .then((data) => {
-          localStorage.setItem("token", data.data.token);
-          setSignedIn(true);
-        })
-        .catch((error) => {
-          setError("unOrEmail", {
-            type: "duplicate",
-            message: error.message,
-          });
+    
+    dispatch(signin(unOrEmail, password))
+      .then((data) => {
+        localStorage.setItem("token", data.token);
+        setSignedIn(true);
+      })
+      .catch((error) => {
+        console.log(error);
+        setError("unOrEmail", {
+          type: "duplicate",
+          message: error,
         });
-    } catch (error) {
-      console.log(error.message);
-      setError("unOrEmail", "duplicate", error.message);
-    }
+      });
   };
   return (
     <div className="sign-in-full-container">

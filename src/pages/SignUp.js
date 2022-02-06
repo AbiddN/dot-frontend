@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import "./SignUp.scss";
-import { createRequest } from "../services/http";
-import logo from "../images/logo.png";
-import { Link } from "react-router-dom";
+import { signup } from "../actions/auth";
+import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import config from "../config";
 
-function SignUp() {
+const SignUp = () => {
   const {
     register,
     handleSubmit,
@@ -16,31 +15,29 @@ function SignUp() {
     formState: { errors },
   } = useForm();
 
+  const [signedUp, setSignedUp] = useState(false);
+
+  const dispatch = useDispatch();
+
   const onSubmit = (data) => {
-    let { name, username, email, password, confirmPassword } = data;
+    let { name, username, email, password } = data;
 
-    let reqBody = {
-      name,
-      username,
-      email,
-      password,
-    };
-
-    let requestOptions = createRequest("POST", reqBody);
-
-    try {
-      fetch(`${config.apiURL}api/users/signup`, requestOptions)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
+    dispatch(signup(name, username, email, password))
+      .then((data) => {
+        setSignedUp(true);
+      })
+      .catch((error) => {
+        console.log(error);
+        setError("confirmPassword", {
+          type: "duplicate",
+          message: error,
         });
-    } catch (err) {
-      return setError("email", "duplicate", err.message);
-    }
+      });
   };
 
   return (
     <div className="sign-up-full-container">
+      {signedUp && <Navigate to="/signin" />}
       <h2 className="sign-up-text">SIGN UP</h2>
       <div className="sign-up-container p-2">
         <form className="sign-up-content" onSubmit={handleSubmit(onSubmit)}>
@@ -180,6 +177,6 @@ function SignUp() {
       </div>
     </div>
   );
-}
+};
 
 export default SignUp;
