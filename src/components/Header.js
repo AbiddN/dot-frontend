@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import { useLocation, Navigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import "./Header.css";
 import logo from "../images/logo.png";
 import { createRequest } from "../services/http";
 import config from "../config";
+import { getMyProfile } from "../actions/user";
 
 function Header() {
   const [logout, setLogout] = React.useState(false);
-  const [loggedUser, setLoggedUser] = React.useState(null);
+  const user = useSelector((state) => state.user);
 
   const handleLogout = (event) => {
     event.preventDefault();
@@ -15,14 +17,12 @@ function Header() {
     setLogout(true);
   };
 
+  const dispatch = useDispatch();
+
   const getCurrentUser = async () => {
-    let user = await fetch(
-      `${config.apiURL}api/users/current_user`,
-      createRequest("GET", {}, true)
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setLoggedUser(data);
+    let user = dispatch(getMyProfile())
+      .then(async (data) => {
+        console.log(await user);
       })
       .catch((err) => console.log(err));
   };
@@ -44,10 +44,7 @@ function Header() {
         <div className="account">
           <h4 className="nav-text">Hi...Marina</h4>
           <div className="ava-img">
-            <img
-              src={loggedUser ? loggedUser.decodedProfileImage : null}
-              alt=""
-            />
+            <img src={user ? user.decodedProfileImage : null} alt="" />
           </div>
           <div
             className={`icon ${logout ? "active" : ""}`}

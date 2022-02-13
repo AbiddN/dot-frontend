@@ -1,11 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import axios from "axios";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store";
+
+/* Check if there is token in local storage */
+const token = localStorage.getItem("token");
+if(token){
+  /* If there is token, set it to the header */
+  axios.defaults.headers.common = { Authorization: `Bearer ${token}` };
+}
 
 ReactDOM.render(
   <Provider store={store}>
