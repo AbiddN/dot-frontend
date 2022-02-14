@@ -11,6 +11,7 @@ import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import Friends from "./pages/Friends";
 import Postingcard from "./components/Postingcard";
+import Searchbar from "./components/Searchbar";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route exact path="/" element={<Landing />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
+        {/* <Route path="/home" element={<Home />}></Route> */}
       </Routes>
     </div>
   );
