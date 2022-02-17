@@ -29,6 +29,11 @@ function Home() {
         <div className="home-post">
           <Postingcard/>
           <Postedcard/>
+          <Postedcard/>
+          <Postedcard/>
+          <Postedcard/>
+          <Postedcard/>
+          <Postedcard/>
         </div>
         <div className="home-friends">
           <Searchbar/>
