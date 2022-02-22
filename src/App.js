@@ -33,7 +33,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         {/* <Route path="/home" element={<Home />}></Route>
-        <Route path="/friends" element={<Friends />}></Route> */}
+        <Route path="/friends" element={<Friends />}></Route>  */}
       </Routes>
     </div>
   );

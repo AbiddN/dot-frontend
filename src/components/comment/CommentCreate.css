@@ -1,0 +1,99 @@
+.onComment-container {
+    background-color: aqua;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    margin-bottom: 100px;
+    /* border-right: 2px solid rgba(0, 0, 0, 0.247); */
+}
+
+.onComment-wrapper {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.24);
+    /* margin-top: 50px; */
+    width: 80%;
+    height: 70px;
+    padding: 0 30px;
+    padding-top: 17px;
+    display: flex;
+}
+
+.onComment-ava {
+    width: 15%;
+    height: 100%;
+    margin-left: -10px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+}
+
+.onComment-ava-img {
+    background-color: rgb(205, 207, 207);
+    overflow: hidden;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+
+.textarea {
+    width: 100%;
+    min-height: 20px;
+    resize: none;
+    font-size: 14px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    /* background-color: green; */
+}
+
+.onComment {
+    background-color: turquoise;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 7px;
+    align-items: center;
+    justify-content: space-around;
+    justify-self: center;
+}
+.todo-form{
+    /* position: absolute; */
+    background-color: red;
+}
+.onComment .addimage {
+    /* background-color: red; */
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    transition: .3s ease;
+    cursor: pointer;
+    border-radius: 500px;
+}
+
+.onComment .addimage:hover {
+    background-color: rgb(233, 232, 232);
+}
+
+.commentbutton {
+    outline: none;
+    background-color: transparent;
+    padding: 2px 4px;
+    border: none;
+    border-radius: 50%;
+    background-color: #90A1C1;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}

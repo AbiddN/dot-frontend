@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Postingcard from "../components/Postingcard";
 import Postedcard from "../components/Postedcard";
 import Searchbar from "../components/Searchbar";
+import Comment from "../components/comment/Comment";
 import Onlinecard from "../components/Onlinecard";
 
 function Home() {
@@ -30,10 +31,7 @@ function Home() {
           <Postingcard/>
           <Postedcard/>
           <Postedcard/>
-          <Postedcard/>
-          <Postedcard/>
-          <Postedcard/>
-          <Postedcard/>
+          <Comment />
         </div>
         <div className="home-friends">
           <Searchbar/>
