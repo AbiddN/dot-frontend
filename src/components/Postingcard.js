@@ -11,7 +11,7 @@ function Postingcard() {
           </div>
         </div>
         <div className="post-area">
-          <textarea className="textarea" />
+          <textarea className="textarea" placeholder='Write your status here ...' />
           <div className="post">
             <div className="addimage">
               <i className="far fa-images"></i>

@@ -1,0 +1,57 @@
+
+.friends__page {
+  /* background-color: white; */
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  padding: 0 50px;
+  margin-bottom: 30px;
+}
+
+.friends__page .friends__ava {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgb(233, 109, 222);
+}
+
+.friends__page h2 {
+  font-size: 2rem;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.friends__details{
+  /* background-color: yellow; */
+  width: 70%;
+}
+.friends__butt-area{
+  width: 100%;
+  height: 40%;
+  /* background-color: aqua; */
+  padding-left: 35px;
+  display: flex;
+  /* border-bottom: 2px solid rgb(83, 82, 82); */
+}
+.friends__btn{
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #8799BB;
+  display: flex;
+  padding: 8px 4px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.friends__btn h5{
+  margin-left: 4px;
+  font-weight: 600;
+}
+
+
+

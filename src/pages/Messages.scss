@@ -4,7 +4,7 @@
   background-color: #1781eb;
 }
 
-.home, .friends{
+.home, .friends, .messages{
   width: 100%;
   height: 100vh;
   // background-color:red ; 
@@ -13,26 +13,29 @@
   background-color: #e7ecf1;
 }
 
-.home-navbar {
+.messages-navbar {
   width: 30%;
   height: 100vh;
   // margin-left: 200px;
   // background-color: blue; 
 }
 
-.home-post {
-  width: 40%;
+.messages-post {
+  width: 20%;
   height: 100vh;
   // background-color: yellow;
   border-right: 2px solid rgba(0, 0, 0, 0.247);
   overflow-y: scroll;
 }
+.messages-post-content{
+  margin-top: 100px;
+}
 ::-webkit-scrollbar {
   display: none;
 }
 
-.home-friends {
-  width: 30%;
+.messages-friends {
+  width: 45%;
   height: 100vh;
   padding:100px 70px;
   padding-right: 140px;
