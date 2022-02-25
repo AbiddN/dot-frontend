@@ -8,6 +8,7 @@
     color: #F1F4F7;
     position: fixed;
     width: 100%;
+    z-index: 99999;
 }
 .logo-header{
     margin-left: 60px;

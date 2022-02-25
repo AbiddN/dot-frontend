@@ -33,7 +33,7 @@ function CommentCreate(props) {
             <img src="" alt="" />
           </div>
         </div>
-        <textarea className="textarea" onChange={handleInput} />
+        <textarea className="onComment-textarea" onChange={handleInput} placeholder="Write your comment here ..."/>
         <button class="commentbutton" type='submit'><i class="fas fa-paper-plane"></i></button>
       
         </form>

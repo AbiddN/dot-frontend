@@ -31,7 +31,7 @@ function Header() {
     getCurrentUser();
   }, []);
 
-  if (["home", "friends"].includes(useLocation().pathname.slice(1))) {
+  if (["home", "friends","myprofile","likes","messages"].includes(useLocation().pathname.slice(1))) {
     return (
       <nav className="header">
         {logout && <Navigate to="/" />}
