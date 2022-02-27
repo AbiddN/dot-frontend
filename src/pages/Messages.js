@@ -7,6 +7,7 @@ import Profilebar from "../components/Profilebar";
 import Postedcard from "../components/Postedcard";
 import Searchbar from "../components/Searchbar";
 import Comment from "../components/comment/Comment";
+import Chat from "../components/chat/Chat";
 import Onlinecard from "../components/Onlinecard";
 
 function Messages() {
@@ -42,9 +43,9 @@ function Messages() {
             <Profilebar />
           </div>
         </div>
+
         <div className="messages-friends">
-          {/* <Searchbar/>
-          <Onlinecard/> */}
+        <Chat/>
         </div>
     </div>
   );

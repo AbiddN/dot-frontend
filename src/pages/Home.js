@@ -36,6 +36,9 @@ function Home() {
         <div className="home-friends">
           <Searchbar/>
           <Onlinecard/>
+          <Onlinecard/>
+          <Onlinecard/>
+          <Onlinecard/>
         </div>
     </div>
   );
