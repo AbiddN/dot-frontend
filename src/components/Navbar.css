@@ -14,7 +14,7 @@
 }
 .navbar{
     /* background-color: blue; */
-    /* margin-top: 10px; */
+    margin-left: 140px;
     display: flex;
     flex-direction: column;
     justify-content: center;

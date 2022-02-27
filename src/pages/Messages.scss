@@ -16,7 +16,7 @@
 .messages-navbar {
   width: 30%;
   height: 100vh;
-  // margin-left: 200px;
+  // margin-right: 200px;
   // background-color: blue; 
 }
 
@@ -33,11 +33,12 @@
 ::-webkit-scrollbar {
   display: none;
 }
-
 .messages-friends {
-  width: 45%;
+  width: 39%;
   height: 100vh;
-  padding:100px 70px;
-  padding-right: 140px;
-  // background-color: turquoise;
+  // padding:100px 70px;
+  padding-top: 64px;
+  // padding-right: 140px;
+  // margin-right: 100px;
+  background-color: turquoise;
 }
