@@ -7,9 +7,9 @@ import { createRequest } from "../services/http";
 import config from "../config";
 import { getMyProfile } from "../actions/user";
 
-function Header({ user }) {
+function Header(props) {
   const [logout, setLogout] = React.useState(false);
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user.user);
 
   const handleLogout = (event) => {
     event.preventDefault();
@@ -19,19 +19,23 @@ function Header({ user }) {
 
   const dispatch = useDispatch();
 
-  const getCurrentUser = async () => {
-    let user = dispatch(getMyProfile())
-      .then(async (data) => {
-        console.log(await user);
-      })
-      .catch((err) => console.log(err));
-  };
+  // const getCurrentUser = async () => {
+  //   let user = dispatch(getMyProfile())
+  //     .then(async (data) => {
+  //       console.log(await user);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
 
   useEffect(() => {
-    getCurrentUser();
+    dispatch(getMyProfile()).then(() => {});
   }, []);
 
-  if (["home", "friends","myprofile","likes","messages"].includes(useLocation().pathname.slice(1))) {
+  if (
+    ["home", "friends", "myprofile", "likes", "messages"].includes(
+      useLocation().pathname.slice(1)
+    )
+  ) {
     return (
       <nav className="header">
         {logout && <Navigate to="/" />}
@@ -42,9 +46,13 @@ function Header({ user }) {
           <h4 className="nav-text">DOTS</h4>
         </div>
         <div className="account">
-          <h4 className="nav-text">Hi...Marina</h4>
-          <div className="ava-img">
-            <img src={user ? user.decodedProfileImage : null} alt="" />
+          <h4 className="nav-text">Hi, {user && user.name}</h4>
+          <div className="ava-img p-0">
+            <img
+              className="w-100 h-100"
+              src={user && user.decodedProfileImage}
+              alt=""
+            />
           </div>
           <div
             className={`icon ${logout ? "active" : ""}`}

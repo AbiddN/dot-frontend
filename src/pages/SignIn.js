@@ -5,7 +5,7 @@ import { signin } from "../actions/auth";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import config from "../config";
+import axios from "axios";
 
 const SignIn = () => {
   const {
@@ -22,10 +22,13 @@ const SignIn = () => {
 
   const onSubmit = (data) => {
     let { unOrEmail, password } = data;
-    
+
     dispatch(signin(unOrEmail, password))
       .then((data) => {
         localStorage.setItem("token", data.token);
+        axios.defaults.headers.common = {
+          Authorization: `Bearer ${data.token}`,
+        };
         setSignedIn(true);
       })
       .catch((error) => {

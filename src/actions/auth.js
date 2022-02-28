@@ -4,7 +4,7 @@ import axios from "axios";
 
 const signup = (name, username, email, password) => async (dispatch) => {
   try {
-    const { data } = await axios.post(`${config.apiURL}api/users/signup`, {
+    const { data } = await axios.post(`${config.apiURL}users/signup`, {
       name,
       username,
       email,
@@ -24,7 +24,7 @@ const signup = (name, username, email, password) => async (dispatch) => {
 
 const signin = (unOrEmail, password) => async (dispatch) => {
   try {
-    const { data } = await axios.post(`${config.apiURL}api/users/signin`, {
+    const { data } = await axios.post(`${config.apiURL}users/signin`, {
       unOrEmail,
       password,
     });
