@@ -7,9 +7,9 @@ import { createRequest } from "../services/http";
 import config from "../config";
 import { getMyProfile } from "../actions/user";
 
-function Header() {
+function Header({ user }) {
   const [logout, setLogout] = React.useState(false);
-  const user = useSelector((state) => state.user);
+  // const user = useSelector((state) => state.user);
 
   const handleLogout = (event) => {
     event.preventDefault();

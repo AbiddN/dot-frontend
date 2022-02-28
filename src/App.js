@@ -10,8 +10,8 @@ import Navbar from "./components/Navbar";
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import Friends from "./pages/Friends";
-import Postingcard from "./components/Postingcard";
-import Searchbar from "./components/Searchbar";
+// import Postingcard from "./components/Postingcard";
+// import Searchbar from "./components/Searchbar";
 
 const App = () => {
   return (

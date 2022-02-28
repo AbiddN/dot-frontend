@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Postingcard from "../components/Postingcard";
 import Postedcard from "../components/Postedcard";
-import Searchbar from "../components/Searchbar";
-import Onlinecard from "../components/Onlinecard";
+// import Searchbar from "../components/Searchbar";
+// import Onlinecard from "../components/Onlinecard";
 
 function Home() {
   return (
@@ -31,8 +31,8 @@ function Home() {
           <Postedcard/>
         </div>
         <div className="home-friends">
-          <Searchbar/>
-          <Onlinecard/>
+          {/* <Searchbar/> */}
+          {/* <Onlinecard/> */}
         </div>
     </div>
   );
