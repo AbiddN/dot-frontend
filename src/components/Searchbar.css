@@ -1,0 +1,29 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    /* width: 253px; */
+    height: 40px;
+    width: 90%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-right: 100px;
+    border: 2px solid #8799BB;
+    /* background-color: green; */
+}
+
+.searchBar i {
+    width: auto;
+    margin: 7px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.searchBar input {
+    margin-left: 20px;
+    width: 75%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+}

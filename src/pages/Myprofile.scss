@@ -4,8 +4,7 @@
     background-color: #1781eb;
 }
 
-.home,
-.friends {
+.profile {
     width: 100%;
     height: 100vh;
     // background-color:red ; 
@@ -13,13 +12,14 @@
     display: flex;
     background-color: #e7ecf1;
 }
-.friends-navbar {
+.myprofile-navbar {
     width: 30%;
     height: 100vh;
     // margin-left: 200px;
     // background-color: blue; 
 }
-.friends-post {
+
+.myprofile-post {
     width: 40%;
     height: 100vh;
     // background-color: yellow;
@@ -30,10 +30,10 @@
     border-right: 2px solid rgba(0, 0, 0, 0.247);
     overflow-y: scroll;
 }
-.friends-post-content  {
-    height: auto;
+.myprofile-post-content  {
+    height: 100vh;
     width: 100%;
-    gap: 35px 0px;
+    gap: 35px 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -47,7 +47,7 @@
     display: none;
 }
 
-.friends-friends {
+.myprofile-friends {
     width: 30%;
     height: 100vh;
     padding: 100px 70px;

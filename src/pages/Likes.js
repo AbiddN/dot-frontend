@@ -1,19 +1,14 @@
 import React from "react";
-import "./Home.scss";
+import "./Likes.scss";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Postingcard from "../components/Postingcard";
 import Postedcard from "../components/Postedcard";
-<<<<<<< HEAD
-// import Searchbar from "../components/Searchbar";
-// import Onlinecard from "../components/Onlinecard";
-=======
 import Searchbar from "../components/Searchbar";
 import Comment from "../components/comment/Comment";
 import Onlinecard from "../components/Onlinecard";
->>>>>>> aaea762edccc35f357b327b5bbd735c46f159332
 
-function Home() {
+function Likes() {
   return (
     // <div className="home-container">
     //   <div className="home">
@@ -27,31 +22,30 @@ function Home() {
 
     //   </div>
     // </div>
-    <div className="home">
+    <div className="likes">
         <Header/>
-        <div className="home-navbar">
+        <div className="likes-navbar">
           <Navbar/>
         </div>
-        <div className="home-post">
-          <Postingcard/>
-          <Postedcard/>
-          <Postedcard/>
-          <Comment />
+        <div className="likes-post">
+          <div className="likes-post-content">
+            <Postedcard/>
+            <Postedcard/>
+            <Postedcard/>
+            <Postedcard/>
+            <Postedcard/>
+            <Postedcard/>
+            <Postedcard/>
+            <Postedcard/>
+            <Comment />
+          </div>
         </div>
-        <div className="home-friends">
-<<<<<<< HEAD
-          {/* <Searchbar/> */}
-          {/* <Onlinecard/> */}
-=======
+        <div className="likes-friends">
           <Searchbar/>
           <Onlinecard/>
-          <Onlinecard/>
-          <Onlinecard/>
-          <Onlinecard/>
->>>>>>> aaea762edccc35f357b327b5bbd735c46f159332
         </div>
     </div>
   );
 }
 
-export default Home;
+export default Likes;

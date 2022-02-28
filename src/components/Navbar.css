@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 90px 50px;
+    padding:90px 50px;
     color: white;
     /* background-color: green; */
     /* margin-left: 200px; */
@@ -14,7 +14,7 @@
 }
 .navbar{
     /* background-color: blue; */
-    /* margin-top: 10px; */
+    margin-left: 140px;
     display: flex;
     flex-direction: column;
     justify-content: center;

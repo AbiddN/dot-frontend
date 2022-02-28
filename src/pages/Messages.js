@@ -1,19 +1,16 @@
 import React from "react";
-import "./Home.scss";
+import "./Messages.scss";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Postingcard from "../components/Postingcard";
+import Profilebar from "../components/Profilebar";
 import Postedcard from "../components/Postedcard";
-<<<<<<< HEAD
-// import Searchbar from "../components/Searchbar";
-// import Onlinecard from "../components/Onlinecard";
-=======
 import Searchbar from "../components/Searchbar";
 import Comment from "../components/comment/Comment";
+import Chat from "../components/chat/Chat";
 import Onlinecard from "../components/Onlinecard";
->>>>>>> aaea762edccc35f357b327b5bbd735c46f159332
 
-function Home() {
+function Messages() {
   return (
     // <div className="home-container">
     //   <div className="home">
@@ -27,31 +24,31 @@ function Home() {
 
     //   </div>
     // </div>
-    <div className="home">
+    <div className="messages">
         <Header/>
-        <div className="home-navbar">
+        <div className="messages-navbar">
           <Navbar/>
         </div>
-        <div className="home-post">
-          <Postingcard/>
-          <Postedcard/>
-          <Postedcard/>
-          <Comment />
+        <div className="messages-post">
+          <div className="messages-post-content">
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+            <Profilebar />
+          </div>
         </div>
-        <div className="home-friends">
-<<<<<<< HEAD
-          {/* <Searchbar/> */}
-          {/* <Onlinecard/> */}
-=======
-          <Searchbar/>
-          <Onlinecard/>
-          <Onlinecard/>
-          <Onlinecard/>
-          <Onlinecard/>
->>>>>>> aaea762edccc35f357b327b5bbd735c46f159332
+
+        <div className="messages-friends">
+        <Chat/>
         </div>
     </div>
   );
 }
 
-export default Home;
+export default Messages;

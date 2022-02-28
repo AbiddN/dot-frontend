@@ -4,7 +4,7 @@
   background-color: #1781eb;
 }
 
-.home, .friends{
+.likes, .friends{
   width: 100%;
   height: 100vh;
   // background-color:red ; 
@@ -13,14 +13,14 @@
   background-color: #e7ecf1;
 }
 
-.home-navbar {
+.likes-navbar {
   width: 30%;
   height: 100vh;
   // margin-left: 200px;
   // background-color: blue; 
 }
 
-.home-post {
+.likes-post {
   width: 40%;
   height: 100vh;
   // background-color: yellow;
@@ -31,10 +31,14 @@
   display: none;
 }
 
-.home-friends {
+.likes-friends {
   width: 30%;
   height: 100vh;
-  padding:100px 50px;
+  padding:100px 70px;
   padding-right: 140px;
   // background-color: turquoise;
+}
+.likes-post-content{
+  // background-color: green;
+  margin-top: 90px;
 }

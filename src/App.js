@@ -9,15 +9,18 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import Likes from "./pages/Likes";
 import Friends from "./pages/Friends";
-// import Postingcard from "./components/Postingcard";
-// import Searchbar from "./components/Searchbar";
+import Myprofile from "./pages/Myprofile";
+import Messages from "./pages/Messages";
+import Postingcard from "./components/Postingcard";
+import Searchbar from "./components/Searchbar";
 
 const App = () => {
   return (
     <div className="">
       <Routes>
-        <Route element={<Layout />}>
+        {/* <Route element={<Layout />}>
           <Route
             path="/home"
             element={<ProtectedRoute component={Home} />}
@@ -28,11 +31,15 @@ const App = () => {
             path="/friends"
             element={<ProtectedRoute component={Friends} />}
           ></Route>
-        </Route>
+        </Route> */}
         <Route exact path="/" element={<Landing />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
-        {/* <Route path="/home" element={<Home />}></Route> */}
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/friends" element={<Friends />}></Route> 
+        <Route path="/myprofile" element={<Myprofile />}></Route> 
+        <Route path="/likes" element={<Likes />}></Route> 
+        <Route path="/messages" element={<Messages />}></Route> 
       </Routes>
     </div>
   );

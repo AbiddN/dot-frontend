@@ -1,0 +1,84 @@
+.messages-container {
+  /* background-color: pink; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.messages-wrapper {
+  /* border-radius: 10px; */
+  background-color: transparent;
+  /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.24); */
+  /* margin-top: 10px; */
+  width: 100%;
+  height: auto;
+  /* padding: 10px; */
+  padding-top: 17px;
+  display: flex;
+  margin-bottom: 2px;
+  /* background-color: red; */
+  /* border-bottom: 1px solid rgba(145, 145, 145, 0.103); */
+}
+.messages-wrapper:hover{
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.messages-ava {
+  width: 90px;
+  height: 50px;
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+}
+
+.messages-ava-img {
+  background-color: rgb(205, 207, 207);
+  overflow: hidden;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.messages-area {
+  /* background-color: yellow; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.messages-textarea {
+  width: 100%;
+  min-height: 46px;
+  resize: none;
+  font-size: 0.8em;
+  padding: 10px;
+  outline: none;
+  border: none;
+  /* background-color: green; */
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.messages-username {
+  /* background-color: green; */
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.messages-username h3{
+  font-size: 1em;
+}
+
+.messages-username .time {
+  margin-left: 10px;
+  margin-top: 2px;
+  font-weight: lighter;
+  color: rgb(82, 80, 80);
+
+}

@@ -9,7 +9,7 @@
 .postedcard-wrapper {
   border-radius: 10px;
   background-color: white;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.24);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.24);
   margin-top: 10px;
   width: 80%;
   height: auto;
@@ -58,6 +58,15 @@
   /* background-color: green; */
   width: 100%;
   padding-left: 10px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.posted-username .time{
+  margin-left: 10px;
+  margin-top: 2px;
+  font-weight: lighter;
+  color: rgb(82, 80, 80);
 }
 
 .feedback-area {
@@ -87,9 +96,7 @@
   background-color: rgb(231, 231, 231);
   color: white;
 }
-.comment i {
-  /* border: 2px solid green; */
-}
+
 .liked {
   color: rgb(245, 80, 80);
   /* background-color: red; */

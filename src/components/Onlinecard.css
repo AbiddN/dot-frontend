@@ -1,0 +1,129 @@
+.online {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    height: 50px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    /* background-color: green; */
+    padding: 0 20px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+.online .online__img {
+    width: 34px;
+    height: 34px;
+    margin-right: 15px;
+    margin-bottom: 1px;
+    background-color: black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.online .online__img img {
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.online h3 {
+    /* margin: 5px 70px 0px 0px; */
+    font-size: 17px;
+    /* background-color: green; */
+    font-weight: lighter;
+    width: 100px;
+}
+
+.dot {
+    background-color: rgb(154, 245, 19);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 30px;
+    display: inline-block;
+    animation: fadeOut .5s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.mess {
+    /* background-color: rgb(0, 17, 255); */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    /* visibility: hidden; */
+    display: none;
+    margin-left: 20px;
+    border: 2px solid #424242;
+    transition: all .3s;
+}
+
+.online:hover {
+    background-color: rgb(241, 241, 241);
+    /* transition: .5s ease; */
+}
+
+.online:hover .mess {
+    display: flex;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: center;
+    /* -webkit-animation: fadeIn .5s; */
+    cursor: pointer;
+    /* visibility: visible; */
+    animation: fadeIn .5s;
+}
+
+.mess:hover {
+    background-color: rgb(214, 214, 214);
+    transition: .3s ease;
+}
+.mess i{
+    color: #424242;
+}
+.online:hover .dot {
+    display: none;
+
+}
+
+.online .online__img {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    margin-bottom: 1px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.online .online__img img {
+    width: 100%;
+}
