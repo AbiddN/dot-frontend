@@ -15,9 +15,7 @@ function Home() {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.post.posts);
   useEffect(() => {
-    dispatch(getAllPosts()).then(() => {
-      console.log(posts);
-    });
+    dispatch(getAllPosts()).then(() => {});
   }, []);
   return (
     <div className="home">
@@ -28,13 +26,14 @@ function Home() {
       <div className="home-post">
         <Postingcard />
         {posts &&
-          posts.map((post) => {
-            console.log("1");
-            <Postedcard key={post._id} post={post} />;
-          })}
-        <Comment />
+          posts.map((post, i) => (
+            <div key={i}>
+              <Postedcard post={post} />
+              <Comment />
+            </div>
+          ))}
       </div>
-      <div className="home-friends">
+      <div className="home-friends p-2">
         <Searchbar />
         <Onlinecard />
         <Onlinecard />

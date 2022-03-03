@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./Postingcard.css";
 import { createPost } from "../actions/post";
 
 function Postingcard() {
   const dispatch = useDispatch();
+
+  const user = useSelector((state) => state.user.user);
 
   const [currentFile, setCurrentFile] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
@@ -31,6 +33,8 @@ function Postingcard() {
 
     dispatch(createPost(fd)).then((data) => {
       setCaption("");
+      setCurrentFile(null);
+      setPreviewImage(null);
     });
   };
 
@@ -39,16 +43,20 @@ function Postingcard() {
       <div className="postingcard-wrapper">
         <div className="post-ava">
           <div className="post-ava-img">
-            <img src="" alt="" />
+            <img
+              className="w-100 h-100"
+              src={user && user.decodedProfileImage}
+              alt=""
+            />
           </div>
         </div>
-        <form className="post-area w-100" onSubmit={submitHandler}>
+        <form className="post-area flex-1" onSubmit={submitHandler}>
           {previewImage && (
             <div className="h-100">
               <img className="w-50" src={previewImage} alt="postImage" />
             </div>
           )}
-          <textarea
+          <input
             onChange={(e) => setCaption(e.target.value)}
             value={caption}
             className="textarea"
@@ -62,7 +70,7 @@ function Postingcard() {
               onChange={pickImage}
               className="invisible h-0 w-0"
             />
-            <label htmlFor="image" className="addimage">
+            <label htmlFor="image" className="addimage mr-1">
               <i className="far fa-images"></i>
             </label>
             <button>Post</button>

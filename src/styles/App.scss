@@ -22,7 +22,7 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 0.5fr 2fr 1fr;
   grid-template-areas: "navbar main friends";
   background-color: #e7ecf1;
 }

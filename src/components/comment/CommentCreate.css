@@ -1,11 +1,9 @@
 .onComment-container {
-    background-color: aqua;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     padding-top: 5px;
-    margin-bottom: 100px;
     /* border-right: 2px solid rgba(0, 0, 0, 0.247); */
 }
 
@@ -31,8 +29,6 @@
 }
 
 .onComment-ava-img {
-    background-color: rgb(205, 207, 207);
-    overflow: hidden;
     border-radius: 50%;
     width: 2.5em;
     height: 2.5em;

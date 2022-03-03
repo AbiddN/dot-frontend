@@ -165,6 +165,10 @@ $spaceamount: (1, 2, 3, 4, 5);
   display: flex;
 }
 
+.flex-1{
+  flex: 1 1 0%;
+}
+
 .justify-center {
   justify-content: center;
 }
